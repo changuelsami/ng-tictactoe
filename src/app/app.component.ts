@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
   data = [
   			[null,null,null], 
   			[null,null,null], 
@@ -20,5 +19,10 @@ export class AppComponent {
 	  	this.data[line][cell] = this.player;
 	  	this.player = this.player == 1 ? 0 : 1;
 	}
+  }
+
+  playerSign(id) {
+  	if(id == 1) return 'X';
+  	if(id == 0) return 'O';
   }
 }
